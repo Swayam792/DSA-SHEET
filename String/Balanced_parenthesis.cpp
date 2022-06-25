@@ -8,6 +8,7 @@ class Solution
     { 
         stack<char> st;
         for(auto par: x){
+            // if stack is empty then we need to see if there coming character is open or closed. If it is closed the we can't pair with open bracket else we push into the stack
             if(st.empty()){
                 if(par == '(' || par == '{' || par == '['){
                     st.push(par);
@@ -17,6 +18,7 @@ class Solution
                 continue;
             }
             
+            //check for the closing bracket if there exist corresponding closing bracket or not, if not the return false , otherwise return true 
             if(par == ')'){
                 if(st.top() == '('){
                     st.pop();
