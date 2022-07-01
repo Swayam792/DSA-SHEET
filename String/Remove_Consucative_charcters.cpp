@@ -32,4 +32,4 @@ int main()
 }  
 
 // Time Complexity - O(N) N - size of the string
-// Space Complexity - O(1)
+// Space Complexity - O(K) K - size of the answer string
